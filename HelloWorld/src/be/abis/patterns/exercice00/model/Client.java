@@ -8,14 +8,12 @@ public class Client {
         shapeList[0] = new Rectangle("red",2.0, 4.0);
         shapeList[1] = new Circle("black",5.0);
 
-        printShapeDetails(shapeList);
+        for (Shape shape : shapeList) {
+            System.out.println(shape);
+        }
 
     }
-    private static void printShapeDetails(Shape[] list) {
-        for (Shape shape : list) {
-            System.out.println(shape.toString());
-        }
-    }
+
 }
 
 

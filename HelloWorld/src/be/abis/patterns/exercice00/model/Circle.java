@@ -24,7 +24,7 @@ public class Circle extends Shape{
     @Override
     public String toString() {
         String s = super.toString();
-        return s.toString();
+        return s.toString()+" and has radius :"+this.getRadius() ;
     }
 
 }

@@ -18,17 +18,14 @@ public class ShapeTest {
         Circle cir = new Circle("green",5);
         List<Shape> sh = new ArrayList<>();
 
-        Shape[] shapeList = new Shape[2];
-        shapeList[0] = rec;
-        shapeList[1] = cir;
-
-        assertEquals (4,shapeList[0] .area(),0);
-        assertEquals (78.54,round(shapeList[1].area()),0);
-        assertEquals ("blue",shapeList[0] .getColor());
-        assertEquals ("green",shapeList[1].getColor());
-
         sh.add(rec);
         sh.add(cir);
+        Shape myRectangle= sh.stream().filter(shape -> shape.getClass().getSimpleName().equals("Rectangle")).findFirst().get();
+        Shape myCircle= sh.stream().filter(shape -> shape.getClass().getSimpleName().equals("Circle")).findFirst().get();
+        assertEquals (4,myRectangle.area(),0);
+        assertEquals (78.54,round(myCircle.area()),0);
+        assertEquals ("blue",myRectangle .getColor());
+        assertEquals ("green",myCircle.getColor());
 
     }
 
