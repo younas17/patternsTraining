@@ -1,4 +1,4 @@
-package be.abis.patterns.exercice00;
+package be.abis.patterns.exercice00.model;
 
 public class Circle extends Shape{
 

@@ -1,4 +1,4 @@
-package be.abis.patterns.exercice00;
+package be.abis.patterns.exercice00.model;
 
 public class Point {
     // list of attributes - x and y coordinates
