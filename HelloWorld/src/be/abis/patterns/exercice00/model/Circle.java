@@ -20,4 +20,11 @@ public class Circle extends Shape{
     public void setRadius(double radius) {
         this.radius = radius;
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
+    }
 }

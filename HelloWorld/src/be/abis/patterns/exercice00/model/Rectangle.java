@@ -30,4 +30,12 @@ public class Rectangle extends Shape {
     public void setWidth(double width) {
         this.width = width;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "height=" + height +
+                ", width=" + width +
+                '}';
+    }
 }
