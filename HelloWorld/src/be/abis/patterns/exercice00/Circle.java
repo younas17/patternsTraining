@@ -2,7 +2,7 @@ package be.abis.patterns.exercice00;
 
 public class Circle extends Shape{
 
-    private final double radius;
+    private  double radius;
 
     public Circle(double radius) {
         super("Circle");
@@ -13,7 +13,11 @@ public class Circle extends Shape{
         return Math.PI * radius * radius;
     }
 
-    public double perimeter() {
-        return 2.0 * Math.PI * radius;
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 }

@@ -4,14 +4,13 @@ public class Client {
 
     public static void main(String[] args) {
 
-        Circle c = new Circle(5.0);
-        Rectangle r = new Rectangle(2.0, 4.0); // Upcasting
+        Shape[] shapeList = new Shape[2];
+        shapeList[0] = new Rectangle(2.0, 4.0);
+        shapeList[1] = new Circle(5.0);
 
-        System.out.println("circle.perimeter = " + c.perimeter());
-        System.out.println("circle.area = " + c.area());
-
-        System.out.println("rectangle.perimeter = " + r.perimeter());
-        System.out.println("rectangle.area = " + r.area());
+        ShapeUtil.printShapeDetails(shapeList);
 
     }
 }
+
+
