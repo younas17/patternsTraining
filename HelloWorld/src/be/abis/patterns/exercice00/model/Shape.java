@@ -1,12 +1,15 @@
 package be.abis.patterns.exercice00.model;
 
-import java.util.List;
-
 public abstract class Shape {
     private String color;
     private Point point;
 
     public Shape() {
+    }
+
+    public Shape(String color, Point point) {
+        this.color = color;
+        this.point = point;
     }
 
     public Shape(String color) {
@@ -23,4 +26,11 @@ public abstract class Shape {
 
     public abstract double area();
 
+    @Override
+    public String toString() {
+        return "Shape " +this.getClass().getSimpleName()+
+                " color is " + this.getColor() + '\'' +
+                ", area is " + this.area()
+                ;
+    }
 }

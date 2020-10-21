@@ -5,6 +5,9 @@ import be.abis.patterns.exercice00.model.Rectangle;
 import be.abis.patterns.exercice00.model.Shape;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 public class ShapeTest {
@@ -13,6 +16,7 @@ public class ShapeTest {
     public void testShapeArea() {
         Rectangle rec = new Rectangle("blue",2,2);
         Circle cir = new Circle("green",5);
+        List<Shape> sh = new ArrayList<>();
 
         Shape[] shapeList = new Shape[2];
         shapeList[0] = rec;
@@ -22,6 +26,10 @@ public class ShapeTest {
         assertEquals (78.54,round(shapeList[1].area()),0);
         assertEquals ("blue",shapeList[0] .getColor());
         assertEquals ("green",shapeList[1].getColor());
+
+        sh.add(rec);
+        sh.add(cir);
+
     }
 
     private double round(double area) {
