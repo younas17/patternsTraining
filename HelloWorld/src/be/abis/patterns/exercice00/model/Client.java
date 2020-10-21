@@ -13,7 +13,7 @@ public class Client {
     }
     private static void printShapeDetails(Shape[] list) {
         for (Shape shape : list) {
-            
+
             System.out.println("Area: is " + shape.area()+ " colored in  "+ shape.getColor());
         }
     }
