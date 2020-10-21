@@ -20,8 +20,8 @@ public class ShapeTest {
 
         sh.add(rec);
         sh.add(cir);
-        Shape myRectangle= sh.stream().filter(shape -> shape.getClass().getSimpleName().equals("Rectangle")).findFirst().get();
-        Shape myCircle= sh.stream().filter(shape -> shape.getClass().getSimpleName().equals("Circle")).findFirst().get();
+        Shape myRectangle= sh.stream().filter(shape -> shape.getClass().isInstance(rec)).findFirst().get();
+        Shape myCircle= sh.stream().filter(shape -> shape.getClass().isInstance(cir)).findFirst().get();
         assertEquals (4,myRectangle.area(),0);
         assertEquals (78.54,round(myCircle.area()),0);
         assertEquals ("blue",myRectangle .getColor());
