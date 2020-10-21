@@ -3,8 +3,8 @@ package be.abis.patterns.exercice00.model;
 import java.util.List;
 
 public abstract class Shape {
-    String color;
-    private List<Point> points;
+    private String color;
+    private Point point;
 
     public Shape() {
     }

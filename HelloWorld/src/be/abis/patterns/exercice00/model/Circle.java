@@ -4,8 +4,8 @@ public class Circle extends Shape{
 
     private  double radius;
 
-    public Circle(double radius) {
-        super("Circle");
+    public Circle(String color ,double radius) {
+        super(color);
         this.radius = radius;
     }
 

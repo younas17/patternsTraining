@@ -2,10 +2,10 @@ package be.abis.patterns.exercice00.model;
 
 public class Rectangle extends Shape{
 private  double height;
-private  double width;
+    private  double width;
 
-    public Rectangle(double width, double height) {
-        super("Rectangle");
+    public Rectangle(String color , double width, double height) {
+        super(color);;
         this.width = width;
         this.height = height;
     }
