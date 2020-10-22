@@ -6,7 +6,7 @@ public class WorkStation extends Node {
     }
 
     public void originate(Packet packet) {
-        this.getNextComponenet().send(packet);
+        this.send(packet);
 
     }
 

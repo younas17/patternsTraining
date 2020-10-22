@@ -15,13 +15,13 @@ public class LanTest {
         PrintServer ps1 = new PrintServer("192.186.0.101");
         Node node2 = new Node("efg");
         PrintServer ps2 = new PrintServer("192.186.0.202");
-        ws.setNextComponenet(node1);
-        node1.setNextComponenet(ps1);
-        ps1.setNextComponenet(node2);
-        node2.setNextComponenet(ps2);
-        ps2.setNextComponenet(ws);
+        ws.setNextComponent(node1);
+        node1.setNextComponent(ps1);
+        ps1.setNextComponent(node2);
+        node2.setNextComponent(ps2);
+        ps2.setNextComponent(ws);
 
-        Packet myPacket = new Packet("Hi there", "192.186.0.202");
+        Packet myPacket = new Packet("192.186.0.202", "Hi there" );
         ws.originate(myPacket);
 
     }

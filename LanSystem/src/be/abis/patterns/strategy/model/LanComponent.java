@@ -2,7 +2,7 @@ package be.abis.patterns.strategy.model;
 
 public abstract class LanComponent {
    private String address ;
-   private LanComponent nextComponenet ;
+   private LanComponent nextComponent;
 
     public LanComponent(String address) {
         this.address = address;
@@ -16,12 +16,12 @@ public abstract class LanComponent {
         this.address = address;
     }
 
-    public LanComponent getNextComponenet() {
-        return nextComponenet;
+    public LanComponent getNextComponent() {
+        return nextComponent;
     }
 
-    public void setNextComponenet(LanComponent nextComponenet) {
-        this.nextComponenet = nextComponenet;
+    public void setNextComponent(LanComponent nextComponent) {
+        this.nextComponent = nextComponent;
     }
 
     public abstract void send(Packet packet);

@@ -7,11 +7,11 @@ public class Node extends LanComponent{
 
     @Override
     public void send(Packet packet) {
-    this.getNextComponenet().send(packet);
+    this.getNextComponent().receive(packet);
     }
 
     @Override
     public void receive(Packet packet) {
-    this.getNextComponenet().receive(packet);
+    this.getNextComponent().send(packet);
     }
 }

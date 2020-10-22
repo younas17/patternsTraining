@@ -9,10 +9,11 @@ public class PrintServer extends Node {
         System.out.println(packet);
     }
 
-
+    @Override
     public void receive(Packet packet) {
         if(packet.getDestinationAdress().equals("192.186.0.202"))
         print(packet);
+        else System.out.println("you are at the wrong destination ");
 
     }
 
