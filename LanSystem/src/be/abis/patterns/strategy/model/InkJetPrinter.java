@@ -3,14 +3,8 @@ package be.abis.patterns.strategy.model;
 public class InkJetPrinter implements PrintStrategy {
 
 
-    String inkPrinter = "ink";
-
-    public InkJetPrinter(String inkPrinter) {
-        this.inkPrinter = inkPrinter;
-    }
-
     @Override
-    public void printerType(String content) {
-        this.printerType(content);
+    public void print(Packet packet) {
+        System.out.println(" message :" + packet.getContents() + " it arrived at " + packet.getDestinationAdress() + "  and will printed by a " + this.getClass().getSimpleName());
     }
 }

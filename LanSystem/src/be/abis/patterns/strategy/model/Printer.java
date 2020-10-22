@@ -1,5 +1,5 @@
 package be.abis.patterns.strategy.model;
 
 public interface Printer {
-    void print(String myText);
+    void printer(String myText);
 }

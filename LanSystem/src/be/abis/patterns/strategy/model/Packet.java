@@ -27,9 +27,9 @@ public class Packet {
 
     @Override
     public String toString() {
-        return "Packet{" +
-                "destinationAdress='" + destinationAdress + '\'' +
-                ", contents='" + contents + '\'' +
-                '}';
+        return "Packet printed by a"+this.getClass().getSimpleName() +
+                " destinationAdress='" + destinationAdress + '\'' +
+                " with contents='" + contents + '\''
+                ;
     }
 }

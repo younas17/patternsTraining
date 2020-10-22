@@ -1,26 +1,28 @@
 package be.abis.patterns.strategy.model;
 
-public class PrintServer extends Node implements Printer {
+public class PrintServer extends Node {
     private  PrintStrategy printStrategy;
-    public PrintServer(String address) {
-        super(address);
-    }
 
-    public void print(Packet packet) {
-        System.out.println(packet);
+    public PrintServer(String address, PrintStrategy printStrategy) {
+        super(address);
+        this.printStrategy=printStrategy;
     }
 
     @Override
     public void receive(Packet packet) {
+
         if(packet.getDestinationAdress().equals("192.186.0.202"))
-        print(packet);
+        print(packet,printStrategy);
 
-        else System.out.println("you are at the wrong destination ");
+        else{ this.send(packet);}
 
     }
 
-    @Override
-    public void print(String printer) {
-        this.printStrategy.printerType(printer);
+    private void print(Packet packet , PrintStrategy printStrategy) {
+        this.printStrategy.print(packet);
     }
+//    @Override
+//    public void printer(String printer) {
+//        this.printStrategy.printerType(printer);
+//    }
 }
