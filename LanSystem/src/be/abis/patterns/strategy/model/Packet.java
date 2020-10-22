@@ -24,4 +24,12 @@ public class Packet {
     public void setContents(String contents) {
         this.contents = contents;
     }
+
+    @Override
+    public String toString() {
+        return "Packet{" +
+                "destinationAdress='" + destinationAdress + '\'' +
+                ", contents='" + contents + '\'' +
+                '}';
+    }
 }

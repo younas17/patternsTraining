@@ -5,12 +5,14 @@ public class PrintServer extends Node {
         super(address);
     }
 
-    public void send(Packet packet) {
-
+    public void print(Packet packet) {
+        System.out.println(packet);
     }
 
 
     public void receive(Packet packet) {
+        if(packet.getDestinationAdress().equals("192.186.0.202"))
+        print(packet);
 
     }
 
