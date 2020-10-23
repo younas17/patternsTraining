@@ -1,7 +1,7 @@
 package be.abis.patterns.strategy.model;
 
 public class PrintServer extends Node {
-    private  PrintStrategy printStrategy;
+    private final PrintStrategy printStrategy;
 
     public PrintServer(String address, PrintStrategy printStrategy) {
         super(address);
@@ -11,7 +11,7 @@ public class PrintServer extends Node {
     @Override
     public void receive(Packet packet) {
 
-        if(packet.getDestinationAdress().equals("192.186.0.202"))
+        if(packet.getDestinationAddress().equals(packet.getDestinationAddress()))
         print(packet,printStrategy);
 
         else{ this.send(packet);}
@@ -19,10 +19,6 @@ public class PrintServer extends Node {
     }
 
     private void print(Packet packet , PrintStrategy printStrategy) {
-        this.printStrategy.print(packet);
+        this.printStrategy.print(packet,printStrategy);
     }
-//    @Override
-//    public void printer(String printer) {
-//        this.printStrategy.printerType(printer);
-//    }
 }

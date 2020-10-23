@@ -1,20 +1,20 @@
 package be.abis.patterns.strategy.model;
 
 public class Packet {
-    private String destinationAdress;
+    private String destinationAddress;
     private String contents;
 
     public Packet(String destinationAdress, String contents) {
-        this.destinationAdress = destinationAdress;
+        this.destinationAddress = destinationAdress;
         this.contents = contents;
     }
 
-    public String getDestinationAdress() {
-        return destinationAdress;
+    public String getDestinationAddress() {
+        return destinationAddress;
     }
 
-    public void setDestinationAdress(String destinationAdress) {
-        this.destinationAdress = destinationAdress;
+    public void setDestinationAddress(String destinationAddress) {
+        this.destinationAddress = destinationAddress;
     }
 
     public String getContents() {
@@ -28,7 +28,7 @@ public class Packet {
     @Override
     public String toString() {
         return "Packet printed by a"+this.getClass().getSimpleName() +
-                " destinationAdress='" + destinationAdress + '\'' +
+                " destinationAdress='" + destinationAddress + '\'' +
                 " with contents='" + contents + '\''
                 ;
     }

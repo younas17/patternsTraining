@@ -1,6 +1,7 @@
 package be.abis.patterns.strategy.model;
 
 public class Node extends LanComponent{
+
     public Node(String address) {
         super(address);
     }
@@ -12,6 +13,6 @@ public class Node extends LanComponent{
 
     @Override
     public void receive(Packet packet) {
-    this.getNextComponent().send(packet);
+    this.send(packet);
     }
 }
