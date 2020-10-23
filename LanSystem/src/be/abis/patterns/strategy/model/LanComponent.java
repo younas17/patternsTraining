@@ -26,4 +26,6 @@ public abstract class LanComponent {
 
     public abstract void send(Packet packet);
     public abstract void receive(Packet packet);
+//    public abstract void handel(Packet packet);
+
 }

@@ -25,6 +25,7 @@ public class Packet {
         this.contents = contents;
     }
 
+
     @Override
     public String toString() {
         return "Packet printed by a"+this.getClass().getSimpleName() +
