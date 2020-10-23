@@ -4,7 +4,7 @@ public class InkJetPrinter implements PrintStrategy {
 
 
     @Override
-    public void print(Packet packet, PrintStrategy printStrategy) {
+    public void print(Packet packet) {
         System.out.println(" message :" + packet.getContents() + " it arrived at " + packet.getDestinationAddress() + "  and will printed by a " + this.getClass().getSimpleName());
     }
 }

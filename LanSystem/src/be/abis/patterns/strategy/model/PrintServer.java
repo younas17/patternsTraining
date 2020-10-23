@@ -12,13 +12,13 @@ public class PrintServer extends Node {
     public void receive(Packet packet) {
 
         if(packet.getDestinationAddress().equals(packet.getDestinationAddress()))
-        print(packet,printStrategy);
+        print(packet);
 
         else{ this.send(packet);}
 
     }
 
-    private void print(Packet packet , PrintStrategy printStrategy) {
-        this.printStrategy.print(packet,printStrategy);
+    private void print(Packet packet ) {
+        this.printStrategy.print(packet);
     }
 }
