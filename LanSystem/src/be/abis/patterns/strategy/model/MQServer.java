@@ -7,7 +7,7 @@ public class MQServer extends PacketHandler {
 
     @Override
     public void handle(Packet packet) {
-        System.out.println("message arrived at " + this.getClass().getSimpleName() );
+        System.out.println(packet.toString() );
 
     }
 }

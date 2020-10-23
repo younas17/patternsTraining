@@ -25,26 +25,9 @@ public class LanTest {
     @Test
     public void testLan() {
 
-        WorkStation ws = new WorkStation(wsAddress);
-        Node node1 = new Node("node1");
-
-        PrintServer ps1 = new PrintServer(destinationAddress1, new LazerPrinter());
-        Node node2 = new Node("node2");
-
-        PrintServer ps2 = new PrintServer(destinationAddress2, new InkJetPrinter());
-
-        FileServer fs = new FileServer(fileServer);
-        MQServer mq = new MQServer(mqServer);
-
-        ws.setNextComponent(node1);
-        node1.setNextComponent(ps1);
-        ps1.setNextComponent(mq);
-        mq.setNextComponent(node2);
-        node2.setNextComponent(ps2);
-        ps2.setNextComponent(fs);
-        fs.setNextComponent(ws);
-
-
+        LanSystemFacade myFacade = new LanSystemFacade();
+        myFacade.createNodes();
+        WorkStation ws =myFacade.createLAN();
         String message = "Hi there";
         ws.originate(new Packet(destinationAddress1, message));
         ws.originate(new Packet(destinationAddress2, message));

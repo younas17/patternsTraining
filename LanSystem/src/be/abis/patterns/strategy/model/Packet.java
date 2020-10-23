@@ -28,8 +28,8 @@ public class Packet {
 
     @Override
     public String toString() {
-        return "Packet printed by a"+this.getClass().getSimpleName() +
-                " destinationAdress='" + destinationAddress + '\'' +
+        return "Packet arrived at"+this.getClass().getSimpleName() +
+                " from='" + destinationAddress + '\'' +
                 " with contents='" + contents + '\''
                 ;
     }
